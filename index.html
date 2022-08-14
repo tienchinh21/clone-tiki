@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/pages/home.css">
+    <link rel="stylesheet" href="./assets/css/pages/content-home.css">
+    <link rel="stylesheet" href="./plugin/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./plugin/slick/slick.css">
+    <link rel="stylesheet" href="./plugin/slick/slick-theme.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="home-page">
+        <!-- COMPONENT HEADER -->
+        <header id="app-header">
+            <div class="container">
+                <div class="header-top">
+                    <div class="header-top-wrap d-flex">
+                        <div class="header-top-left d-flex">
+                            <div class="logo-menu">
+                                <div class="logo-menu-wrap">
+                                    <a href="" class="my-logo d-block">
+                                        <img class="color-image img-full"
+                                            src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png"
+                                            alt="tiki-logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="form-search">
+                                <div class="form-search-wrap">
+                                    <form action="" class="form-search-main d-flex align-items-center w-100">
+                                        <input type="text" name="search" value=""
+                                            placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
+                                            class="form-search-control" />
+                                        <button type="submit"
+                                            class="form-search-btn d-flex align-items-center justify-content-center">
+                                            <img class="icon-search"
+                                                src="https://salt.tikicdn.com/ts/upload/ed/5e/b8/8538366274240326978318348ea8af7c.png"
+                                                alt="">
+                                            <span>Tìm kiếm</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-top-right">
+                            <div class="header-account">
+                                <img class="profile-icon"
+                                    src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png"
+                                    alt="">
+                                <div class="profile-auth">
+                                    <span class="profile-auth-title">Đăng Nhập / Đăng Ký</span>
+                                    <div class="profile-auth-sub-title">
+                                        <span>Tài khoản</span>
+                                        <img class="arrowIcon"
+                                            src="https://salt.tikicdn.com/ts/upload/d7/d4/a8/34939af2da1ceeeae9f95b7485784233.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-cart">
+                                <a href="" class="header-cart-link">
+                                    <div class="header-cart-link-wrap">
+                                        <div class="cart-wrapper">
+                                            <img class="cart-icon"
+                                                src="https://salt.tikicdn.com/ts/upload/40/44/6c/b80ad73e5e84aeb71c08e5d8d438eaa1.png"
+                                                alt="">
+                                            <span class="cart-value">0</span>
+                                        </div>
+                                        <span class="cart-text">Giỏ Hàng</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <div class="header-bottom-wrap">
+                        <a href="https://tiki.vn/khuyen-mai/mien-phi-van-chuyen?src=header" class="free-ship">
+                            <img src="https://salt.tikicdn.com/ts/upload/e5/1d/22/61ff572362f08ead7f34ce410a4a6f96.png"
+                                alt="free-ship-badge" height="12" width="83" />
+                        </a>
+                        <nav class="quicklinks">
+                            <a class="quicklinks-item" href="https://tiki.vn/tikingon/trai-cay/c44824">trái cây</a>
+                            <a class="quicklinks-item" href="https://tiki.vn/tikingon/thit-trung/c54276">thịt, trứng</a>
+                            <a class="quicklinks-item" href="https://tiki.vn/tikingon/rau-cu-qua/c54302">rau củ quả</a>
+                            <a class="quicklinks-item" href="https://tiki.vn/tikingon/sua-bo-pho-mai/c54330">sữa, bơ,
+                                phô mai</a>
+                            <a class="quicklinks-item" href="https://tiki.vn/tikingon/ca-thuy-hai-san/c54290">hải
+                                sản</a>
+                            <a class="quicklinks-item" href="https://tiki.vn/tikingon/gao-mi-nong-san/c54384">gạo, mì ăn
+                                liền</a>
+                            <a class="quicklinks-item" href="https://tiki.vn/tikingon/bia-do-uong/c54412">đồ uống, bia
+                                rượu</a>
+                            <a class="quicklinks-item" href="https://tiki.vn/tikingon/banh-keo-gio-qua/c54452">bánh
+                                kẹo</a>
+                        </nav>
+                        <a class="link-seller" href="/khuyen-mai/ban-hang-cung-tiki?src=desktop_header">
+                            <img class="icon"
+                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icon-seller.svg">
+                            <span class="text">Bán hàng cùng Tiki</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ==================================== -->
+        <!-- =============END HEADER============= -->
+        <!-- ====================================-->
+        
+
+
+        <!-- COMPONENT CONTENT -->
+        <main id="app-home-content">
+            <!-- star selector-product -->
+            <div class="selector-product p15px bg-white">
+                <div class="container-product">
+                    <div class="selector container d-flex">
+                        <span class="icon-prev">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </span>
+                        <div class="content-product container">
+                            <span class="slider">
+                                <a href="">
+                                    <div class="i-block pfr-14px">Thịt,Rau củ</div>
+                                </a>
+                                <a href="">
+                                    <div class="i-block pfr-14px">Bách hóa </div>
+                                </a>
+                                <a href="">
+                                    <div class="i-block pfr-14px">Nhà cửa</div>
+                                </a>
+                                <a href="">
+                                    <div class="i-block pfr-14px">Điện tử</div>
+                                </a>
+                                <a href="">
+                                    <div class="i-block pfr-14px">Thiết bị số</div>
+                                </a>
+                                <a href="">
+                                    <div class="i-block pfr-14px">Điện thoại</div>
+                                </a> <a href="">
+                                    <div class="i-block pfr-14px">Mẹ&bé</div>
+                                </a>
+                                <a href="">
+                                    <div class="i-block pfr-14px">Làm đẹp</div>
+                                </a>
+                                <a href="">
+                                    <div class="i-block pfr-14px">Gia dụng</div>
+                                </a> <a href="">
+                                    <div class="i-block pfr-14px">Thời trang nam</div>
+                                </a>
+                                <a href="">
+                                    <div class="i-block pfr-14px">Thời trang nữ</div>
+                                </a>
+                            </span>
+                        </div>
+                        <span class="icon-next ">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- end selector-product -->
+
+            <!-- ============================ -->
+
+            <!-- star banner-top -->
+            <div class="banner-top container">
+                <div class="container-section-wrap">
+                    <div class="section-banner-top-left">
+                        <div class="banner-top-slider">
+                            <div class="banner-top-slider-item">
+                                <a href="" class="banner-link">
+                                    <img src="https://salt.tikicdn.com/ts/banner/c6/ce/98/a68dcad8aa5304b2611e24468756da20.png"
+                                        alt="" class="banner-image"
+                                    >
+
+                                </a>
+                            </div>
+                            <div class="banner-top-slider-item">
+                                <a href="" class="banner-link">
+                                    <img src="https://salt.tikicdn.com/ts/banner/c6/ce/98/a68dcad8aa5304b2611e24468756da20.png"
+                                        alt="" class="banner-image"
+                                    >
+
+                                </a>
+                            </div>
+                            <div class="banner-top-slider-item">
+                                <a href="" class="banner-link">
+                                    <img src="https://salt.tikicdn.com/ts/banner/c6/ce/98/a68dcad8aa5304b2611e24468756da20.png"
+                                        alt="" class="banner-image" 
+                                    >
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-banner-top-right">
+                        <a href="" class="banner-right-link">
+                            <img src="https://salt.tikicdn.com/ts/banner/b2/3c/f0/b05db3a5d2f16f022051f10ffad36bf7.png"
+                                class="banner-img"
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- ------end  banner-top --------->
+
+            <!-- ============================ -->
+
+            <!---- star home deal and reward --->
+            <div class="homedeal-reward">
+                <div class="homedeal-rewrad-warp container d-flex mt-mb">
+                    <div class="homedeal-left bg-white">
+                        <div class="homedeal-header d-flex">
+                            <div class="header-left d-flex">
+                                <div>
+                                    <img src="./assets/images/giasoc1.svg" alt="">
+                                    <img width="21" src="./assets/images/giasoc2.svg" alt=""
+                                        class="style__Flash-sc-jrvone-0 eBPnHV">
+                                    <img src="./assets/images/giasoc3.svg" alt="">
+                                </div>
+                                <div class="clock">
+                                    <span>00</span>
+                                    :
+                                    <span>17</span>
+                                    :
+                                    <span>00</span>
+                                </div>
+                            </div>
+                            <div class="header-right">
+                                <a title="Xem tất cả Deal Hot">Xem thêm</a>
+                            </div>
+                        </div>
+                        <div class="homedeal-body">
+                            <div class="slider-warp">
+                                <div class="slick-slider">
+                                
+                                    <div class="slick-list">
+                                        <div class="slick-track">
+                                            <div class="slick-active">
+                                                <div>
+                                                    <a href="" class="deal-item">
+                                                        <div>
+                                                            <div class="style-deal">
+                                                                <img src="./assets/images/sale1.webp" alt=""
+                                                                    class="deal-image w-100">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="deals__price has-discount">
+                                                            <span style="font-size: 16px;">179.000 ₫</span>
+                                                            <span class="deals__price__discount">-70%</span>
+                                                        </div>
+                                                        <div class="deals__qty">
+                                                            <div class="deals__progress"></div>
+                                                            <span>Sắp bán hết</span>
+                                                            <img class="fire-icon"
+                                                                src="./assets/images/fire_icon.svg">
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="slick-active">
+                                                <a href="" class="deal-item">
+                                                    <div>
+                                                        <div class="style-deal">
+                                                            <img src="./assets/images/sale2.jpg" alt=""
+                                                                class="deal-image w-100">
+                                                        </div>
+                                                    </div>
+                                                    <div class="deals__price has-discount">
+                                                        <span style="font-size: 16px;">160.000 ₫</span>
+                                                        <span class="deals__price__discount">-10%</span>
+                                                    </div>
+                                                    <div class="deals__qty">
+                                                        <div class="deals__progress"></div>
+                                                        <span>Đã bán 3</span>
+                                                        <img class="fire-icon"
+                                                        src="./assets/images/fire_icon.svg">
+                                                    </div>
+
+                                                </a>
+                                            </div>
+                                            <div class="slick-active">
+                                                <a href="" class="deal-item">
+                                                    <div>
+                                                        <div class="style-deal">
+                                                            <img src="./assets/images/sale3.jpg" alt=""
+                                                                class="deal-image w-100">
+                                                        </div>
+                                                    </div>
+                                                    <div class="deals__price has-discount">
+                                                        <span style="font-size: 16px;">3.250.000 ₫</span>
+                                                        <span class="deals__price__discount">-30%</span>
+                                                    </div>
+                                                    <div class="deals__qty">
+                                                        <div class="deals__progress"></div>
+                                                        <span>Đã bán 1t</span>
+                                                        <img class="fire-icon"
+                                                        src="./assets/images/fire_icon.svg">
+                                                    </div>
+
+                                                </a>
+
+                                            </div>
+                                            <div class="slick-active">
+                                                <a href="" class="deal-item">
+                                                    <div>
+                                                        <div class="style-deal">
+                                                            <img src="./assets/images/sale4.jpg" alt=""
+                                                                class="deal-image w-100">
+                                                        </div>
+                                                    </div>
+                                                    <div class="deals__price has-discount">
+                                                        <span style="font-size: 16px;">7.750.000 ₫</span>
+                                                        <span class="deals__price__discount">-40%</span>
+                                                    </div>
+                                                    <div class="deals__qty">
+                                                        <div class="deals__progress"></div>
+                                                        <span>Đã bán 15</span>
+                                                        <img class="fire-icon"
+                                                        src="./assets/images/fire_icon.svg">
+                                                    </div>
+
+                                                </a>
+                                            </div>
+                                            <div class="slick-active">
+                                                <a href="" class="deal-item">
+                                                    <div>
+                                                        <div class="style-deal">
+                                                            <img src="./assets/images/sale5.jpg" alt=""
+                                                                class="deal-image w-100">
+                                                        </div>
+                                                    </div>
+                                                    <div class="deals__price has-discount">
+                                                        <span style="font-size: 16px;">1.750.000 ₫</span>
+                                                        <span class="deals__price__discount">-40%</span>
+                                                    </div>
+                                                    <div class="deals__qty">
+                                                        <div class="deals__progress"></div>
+                                                        <span>Đã bán 2</span>
+                                                        <img class="fire-icon"
+                                                        src="./assets/images/fire_icon.svg">
+                                                    </div>
+
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homedeal-right"></div>
+                </div>
+            </div>
+             <!-- end home deal and reward -->
+             <!-- ======================== -->
+             <!------- star home-brand ------>
+            <div class="home_brand container">
+                <div class="home_brand-wrap d-flex">
+                    <a href="" class="side-brand"><img src="./assets/images/banner1.webp" alt=""></a>
+                    <a href="" class="center-brand"><img src="./assets/images/banner2.webp" alt=""></a>
+                    <a href="" class="side-brand"><img src="./assets/images/banner3.webp" alt=""></a>
+                </div>
+            </div>
+            <!-- end home-brand -->
+            <!-- ==================== -->
+            <!-- star home_quicklinks -->
+            <div class="home_quicklinks_tab_container container">
+                <div class="home_quicklinks_warp">
+                    <a href="" class="item"><img src="./assets/images/quicklink1.gif" alt=""><span>Mua sắm có lời</span></a>
+                    <a href="" class="item"><img src="./assets/images/qiucklink2.webp" alt=""><span>Siêu sale8.8</span></a>
+                    <a href="" class="item"><img src="./assets/images/quicklink3.webp" alt=""><span>Đi chợ siêu tốc</span> </a>
+                    <a href="" class="item"><img src="./assets/images/quicklink4.webp" alt=""><span>Đóng tiền, nạp thẻ</span></a>
+                    <a href="" class="item"><img src="./assets/images/quicklink5.webp" alt=""><span>Mua bán ASA/XU</span></a>
+                    <a href="" class="item"><img src="./assets/images/quicklink6.webp" alt=""><span>Mã giảm giá</span></a>
+                    <a href="" class="item"><img src="./assets/images/quicklink7.webp" alt=""><span>Bảo hiểm Tiki360</span></a>
+                    <a href="" class="item"><img src="./assets/images/quicklink8.webp" alt=""><span>Giảm đến50%</span></a>
+                    <a href="" class="item"><img src="./assets/images/quicklinh9.webp" alt=""><span>Hoàn tiền 15%</span></a>
+                    <a href="" class="item"><img src="./assets/images/quicklink10.webp" alt=""><span>Ưu đãi thanh toán</span></a>
+                </div>
+            </div>
+            <!--------end home_quicklinks -------->
+            <!--================================ -->
+            <!--- home_banner_primary_container --->
+            <div class="home_banner_primary_container container">
+                <div class="home_banner_primary_container-wrap w-100 mt-mb d-flex"> 
+                    <a href=""><img src="./assets/images/item-banner1.webp" alt=""></a>
+                    <a href=""><img src="./assets/images/item-banner2.webp" alt=""></a>
+                    <a href=""><img src="./assets/images/item-banner3.webp" alt=""></a>
+                    <a href=""><img src="./assets/images/item-banner4.webp" alt=""></a>
+                </div>  
+            </div>
+
+                <!-------- end-home_banner_primary_container ------->
+                <!------- ================================= -------->
+                <!--------------- brand-static-widget -------------->
+                <div class="brand-static-widget container">
+                    <div class="brand-static-widget-wrap">
+                        <div class="header">
+                            <div class="main-title">
+                                <img class="main-title__icon" width="24" height="24"
+                                    src="./assets/images/thuonghieu9hang.png">
+                                <div class="main-title__text">Thương Hiệu Chính Hãng</div>
+                            </div>
+                            <a class="see-more-link" href="">XEM THÊM</a>
+                        </div>
+                        <div class="main_banner">
+                            <div class="main_banner-wrap">
+                              <div class="slick-slider">
+                                <div class="slick-list">
+                                    <div class="slick-slide p10px"><img src="./assets/images/hot-deal1.webp" alt=""></div>
+                                    <div class="slick-slide p10px"><img src="./assets/images/hot-deal1.webp" alt=""></div>
+                                    <div class="slick-slide p10px"><img src="./assets/images/hot-deal1.webp" alt=""></div>
+                                    <div class="slick-slide p10px"><img src="./assets/images/hot-deal1.webp" alt=""></div>
+                                    <div class="slick-slide p10px"><img src="./assets/images/hot-deal1.webp" alt=""></div>
+                                    <div class="slick-slide p10px"><img src="./assets/images/hot-deal1.webp" alt=""></div>
+                                    <div class="slick-slide p10px"><img src="./assets/images/hot-deal1.webp" alt=""></div>
+                                    <div class="slick-slide p10px"><img src="./assets/images/hot-deal1.webp" alt=""></div>
+                                </div>
+                                <a href=""></a>
+                              </div>
+                            </div>
+                            <div class="footer"></div>
+                        </div>
+                    </div>
+                    <!-- end home deal and reward 
+        </main>
+        <-- COMPONENT FOOTER -->
+                    <footer id="app-footer"></footer>
+                </div>
+
+                <script src="./plugin/jquery/jquery.min.js"></script>
+                <script src="./plugin/slick/slick.js"></script>
+                <script>
+                    $(function() {
+                     $('.banner-top-slider').slick({
+                      dots: true,
+                   });
+                     });
+                    $('.slick-list').slick({
+                     infinite: false,
+                     slidesToShow: 2,
+                     slidesToScroll: 2
+                     
+                    });
+                </script>
+         
+</body>
+
+</html>

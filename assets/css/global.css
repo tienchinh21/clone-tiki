@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
+@import "./reset.css";
+@import "./custom.css";
+
+:root {
+    --font-family-main: 'Roboto', sans-serif;
+    --main-bg-color: #F5F5FA;
+    --main-color: rgb(36, 36, 36);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    line-height: 1.2;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+/* ======================================= */
+/* ========== STYLESHEET HEADER ========== */
+/* ======================================= */
+
+header#app-header {
+    background-color: rgb(26, 148, 255);
+}
+
+.header-top .header-top-wrap {
+    padding: 16px 0px 10px;
+}
+
+.header-top .header-top-left {
+    flex: 1;
+}
+
+.header-top .header-top-left .logo-menu {
+    flex-basis: 190px;
+    max-width: 190px;
+    margin-right: 16px;
+}
+
+.header-top .header-top-left .logo-menu .my-logo {
+    width: 60px;
+    height: 40px;
+}
+
+.header-top .header-top-left .form-search {
+    flex: 1;
+}
+
+.header-top .header-top-left .form-search-control {
+    flex: 1;
+    outline: none;
+    font-size: 14px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.header-top .header-top-left .form-search-btn {
+    cursor: pointer;
+    flex-basis: 120px;
+    max-width: 120px;
+    background: rgb(13, 92, 182);
+    height: 40px;
+    border-radius: 0 2px 2px 0;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    outline: none;
+}
+
+.header-top .header-top-left .form-search-btn .icon-search {
+    width: 20px;
+    height: 20px;
+    margin: 0px 8px 0px 0px;
+}
+
+/* header-top-right */
+.header-top .header-top-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-top-right .header-account {
+    cursor: pointer;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.header-top-right .header-account .profile-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+.header-top-right .header-account .profile-auth {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top-right .header-account .profile-auth-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+    text-transform: capitalize;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.header-top-right .header-account .profile-auth-sub-title {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 20px;
+    min-width: 120px;
+}
+
+.header-top-right .header-account .profile-auth-sub-title>span {
+    max-width: 104px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.header-top-right .header-account .profile-auth-sub-title .arrowIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.header-top-right .header-cart .header-cart-link {
+    text-decoration: none;
+}
+
+.header-top-right .header-cart .header-cart-link-wrap {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    margin: 0px 0px 0px 16px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.header-top-right .header-cart .header-cart-link .cart-wrapper {
+    position: relative;
+    margin-right: 8px;
+    display: flex;
+
+}
+
+.header-cart-link .cart-wrapper .cart-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.header-cart-link .cart-wrapper .cart-value {
+    color: rgb(36, 36, 36);
+    background: rgb(253, 216, 53);
+    height: 20px;
+    left: 20px;
+    top: -2px;
+    border-radius: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    position: absolute;
+    padding: 0px 7px;
+}
+/* STYLE BOTTOM HEADER */
+#app-header .header-bottom-wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#app-header .header-bottom .free-ship {
+    position: absolute;
+}
+
+#app-header .header-bottom .quicklinks {
+    margin-left: 206px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#app-header .header-bottom a {
+    display: block;
+    font-size: 11px;
+    line-height: 16px;
+    color: white;
+    margin-right: 12px;
+}
+
+#app-header .link-seller {
+    margin-bottom: 12px;
+    height: 22px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 0px 8px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* ======================================= */
+/* ========== STYLESHEET FOOTER ========== */
+/* ======================================= */
+footer#app-footer {}
