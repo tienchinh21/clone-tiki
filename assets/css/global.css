@@ -12,6 +12,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: var(--font-family-main);
     font-size: 16px;
@@ -222,4 +223,122 @@ header#app-header {
 /* ======================================= */
 /* ========== STYLESHEET FOOTER ========== */
 /* ======================================= */
-footer#app-footer {}
+footer#app-footer {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    color: rgb(128, 128, 137);
+    background-color: white;
+}
+#app-footer .Information{
+    padding: 16px 0px;
+}
+#app-footer .footer-warp{
+    display: flex;
+    justify-content: space-between;
+}
+#app-footer .footer-warp .block{
+    width: 226px;
+}
+#app-footer .footer-warp .block > h4{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgb(56, 56, 61);
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+#app-footer .footer-warp .block p{
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(128, 128, 137);
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+#app-footer .footer-warp .block .hotline a{
+    color: rgb(56, 56, 61);
+    font-weight: 500;
+}
+#app-footer .footer-warp .block .small-text{
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(128, 128, 137);
+}
+#app-footer .footer-warp .block .security{
+    margin-bottom: 8px;
+}
+#app-footer .footer-warp .block .flex{
+    gap: 8px;
+    align-items: center;
+}
+#app-footer .footer-warp .block .flexx{
+    width: 226px;
+    gap: 8px;
+    height: 80px;
+}
+#app-footer .footer-warp .block .flexx .down{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+#app-footer .line{
+    height: 1px;
+    background-color: rgb(235, 235, 240);
+}
+#app-footer .HomeExtraFooter .home h1{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgb(56, 56, 61);
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+#app-footer .HomeExtraFooter .home h2{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    margin-top: 0px;
+    color: rgb(128, 128, 137);
+}
+#app-footer .HomeExtraFooter .home p{
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(128, 128, 137);
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+#app-footer .FooterHeading{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgb(56, 56, 61);
+    margin-bottom: 12px;
+    margin-top: 0px;
+}
+#app-footer .Category a{
+    color: rgb(128, 128, 137);
+}
+.home-page .chat-platform{
+    cursor: pointer;
+    position: fixed;
+    z-index: 999;
+    bottom: 0px;
+    right: 16px;
+    padding: 10px 16px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(40 40 43 / 10%) 0px -8px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgb(11, 116, 229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#app-footer .CategoryList .Column .Category a:hover{
+    text-decoration: underline;
+} 

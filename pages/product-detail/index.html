@@ -1,16 +1,1185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/pages/content-home.css">
     <link rel="stylesheet" href="../../assets/css/pages/product-detail.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+    <link rel="stylesheet" href="../../plugin/slick/slick.css">
+    <link rel="stylesheet" href="../../plugin/slick/slick-theme.css">
     <title>Product Detail</title>
 </head>
+
 <body>
-    <header>
-        <h1 class="title-header">Title header</h1>
-    </header>
+    <div class="home-page-product">
+        <!-- COMPONENT HEADER -->
+        <header id="app-header">
+            <div class="container">
+                <div class="header-top">
+                    <div class="header-top-wrap d-flex">
+                        <div class="header-top-left d-flex">
+                            <div class="logo-menu">
+                                <div class="logo-menu-wrap">
+                                    <a href="" class="my-logo d-block">
+                                        <img class="color-image img-full"
+                                            src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png"
+                                            alt="tiki-logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="form-search">
+                                <div class="form-search-wrap">
+                                    <form action="" class="form-search-main d-flex align-items-center w-100">
+                                        <input type="text" name="search" value=""
+                                            placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
+                                            class="form-search-control" />
+                                        <button type="submit"
+                                            class="form-search-btn d-flex align-items-center justify-content-center">
+                                            <img class="icon-search"
+                                                src="https://salt.tikicdn.com/ts/upload/ed/5e/b8/8538366274240326978318348ea8af7c.png"
+                                                alt="">
+                                            <span>Tìm kiếm</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-top-right">
+                            <div class="header-account">
+                                <img class="profile-icon"
+                                    src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png"
+                                    alt="">
+                                <div class="profile-auth">
+                                    <span class="profile-auth-title">Đăng Nhập / Đăng Ký</span>
+                                    <div class="profile-auth-sub-title">
+                                        <span>Tài khoản</span>
+                                        <img class="arrowIcon"
+                                            src="https://salt.tikicdn.com/ts/upload/d7/d4/a8/34939af2da1ceeeae9f95b7485784233.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-cart">
+                                <a href="" class="header-cart-link">
+                                    <div class="header-cart-link-wrap">
+                                        <div class="cart-wrapper">
+                                            <img class="cart-icon"
+                                                src="https://salt.tikicdn.com/ts/upload/40/44/6c/b80ad73e5e84aeb71c08e5d8d438eaa1.png"
+                                                alt="">
+                                            <span class="cart-value">0</span>
+                                        </div>
+                                        <span class="cart-text">Giỏ Hàng</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <div class="header-bottom-wrap">
+                        <a href="" class="free-ship">
+                            <img src="https://salt.tikicdn.com/ts/upload/e5/1d/22/61ff572362f08ead7f34ce410a4a6f96.png"
+                                alt="free-ship-badge" height="12" width="83" />
+                        </a>
+                        <nav class="quicklinks">
+                            <a class="quicklinks-item" href="">trái cây</a>
+                            <a class="quicklinks-item" href="">thịt, trứng</a>
+                            <a class="quicklinks-item" href="">rau củ quả</a>
+                            <a class="quicklinks-item" href="">sữa, bơ,
+                                phô mai</a>
+                            <a class="quicklinks-item" href="">hải
+                                sản</a>
+                            <a class="quicklinks-item" href="">gạo, mì ăn
+                                liền</a>
+                            <a class="quicklinks-item" href="">đồ uống, bia
+                                rượu</a>
+                            <a class="quicklinks-item" href="">bánh
+                                kẹo</a>
+                        </nav>
+                        <a class="link-seller" href="">
+                            <img class="icon"
+                                src="https://frontend.tikicdn.com/_desktop-next/static/img/icon-seller.svg">
+                            <span class="text">Bán hàng cùng Tiki</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ======================================== -->
+        <!-- =============END HEADER================= -->
+        <!-- ======================================== -->
+        <main>
+            <div class="Home-BreadCrumb">
+                <div class="breadcrumb-wrap container">
+                    <div class="breadcrumb d-flex">
+                        <a class="breadcrumb-item" href="">
+                            <span>Trang chủ</span>
+                        </a>
+                        <span class="icon__next"><svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#808089" fill-rule="evenodd" clip-rule="evenodd" d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L6.35355 5.64645C6.54882 5.84171 6.54882 6.15829 6.35355 6.35355L1.35355 11.3536C1.15829 11.5488 0.841709 11.5488 0.646447 11.3536C0.451184 11.1583 0.451184 10.8417 0.646447 10.6464L5.29289 6L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"></path></svg></span>
+                        <a class="breadcrumb-item" href="">
+                            <span>Điện Thoại - Máy Tính Bảng</span>
+                        </a>
+                        <span class="icon__next"><svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#808089" fill-rule="evenodd" clip-rule="evenodd" d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L6.35355 5.64645C6.54882 5.84171 6.54882 6.15829 6.35355 6.35355L1.35355 11.3536C1.15829 11.5488 0.841709 11.5488 0.646447 11.3536C0.451184 11.1583 0.451184 10.8417 0.646447 10.6464L5.29289 6L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"></path></svg></span>
+                        <a class="breadcrumb-item" href="">
+                            <span>Máy tính bảng</span>
+                        </a>
+                        <span class="icon__next"><svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#808089" fill-rule="evenodd" clip-rule="evenodd" d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L6.35355 5.64645C6.54882 5.84171 6.54882 6.15829 6.35355 6.35355L1.35355 11.3536C1.15829 11.5488 0.841709 11.5488 0.646447 11.3536C0.451184 11.1583 0.451184 10.8417 0.646447 10.6464L5.29289 6L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"></path></svg></span>
+                        <a class="breadcrumb-item" href="">
+                            <span>Máy Tính Bảng Samsung Galaxy Tab S7 FE LTE T735 (4GB/64GB) - Hàng Chính Hãng</span>
+                        </a>
+                    </div>
+                     
+                </div>
+            </div>
+            <div class="CONTAINER-PRODUCT">
+                <div class="HEADER-PRODUCT container d-flex">
+                    <div class="header-left">
+                        <div class="group-images">
+                            <div class="thumbnail">
+                                <div class="ImageLens">
+                                    <img src="../../assets/images-product-detaill/imgbanner.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-images d-flex">
+                            <div class="list-img">
+                                <a class="Active" href=""><img src="../../assets/images-product-detaill/list-img1.webp" alt=""></a>
+                                <a class="Active" href=""><img src="../../assets/images-product-detaill/list-img2.webp" alt=""></a>
+                                <a class="Active" href=""><img src="../../assets/images-product-detaill/list-img3.webp" alt=""></a>
+                                <a class="Active" href=""><img src="../../assets/images-product-detaill/list-img4.webp" alt=""></a>
+                                <a class="Active" href=""><img src="../../assets/images-product-detaill/list-img5.webp" alt=""></a>
+                                <a class="open-gallery" href=""><img src="../../assets/images-product-detaill/view-more1.webp" alt="" style="width:100%;"><span>Xem thêm 62 hình</span></a>
+                            </div>
+                        </div>
+                        <div class="share">
+                            <button class="Button"><img alt="" width="24" height="24" src="../../assets/images-product-detaill/icon-share.png">
+                                <span>Chia sẻ nhận +547.080 Xu</span>
+                            </button>
+                        </div>
+                        <div class="brand">
+                            <a href=""><img src="../../assets/images-product-detaill/brand.webp" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- =========== -->
+                    <div class="center"></div>
+                    <!-- =========== -->
+                    <div class="header-right">
+                        <div class="header">
+                            <div class="brandd d-flex">
+                                <div class="brand-and-author d-flex">
+                                    <h6>Thương hiệu:</h6>
+                                    <a href="">Samsung</a>
+                                </div>
+                                <div class="bestseller d-flex">
+                                    <p>
+                                        <span>Đứng thứ 8 trong</span>
+                                        <a href="">Top 1000</a>
+                                        <a href="">Máy tính bảng</a>
+                                        <a href="">bán chạy tháng này</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <h1>Máy Tính Bảng Samsung Galaxy Tab S7 FE LTE T735 (4GB/64GB) - Hàng Chính Hãng</h1>
+                            <div class="rate d-flex">
+                                    <div class="star-sell d-flex">
+                                        <div class="Starrr d-flex">
+                                            <div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                            </div>
+                                        </div>
+                                        <a class="number" href="">(Xem 481 đánh giá)</a>
+                                        <div class="small-title"></div>
+                                    </div>
+                                    <div class="sell">Đã bán 3023</div>
+                            </div>
+                        </div>
+                        <!-- ------- -->
+                        <div class="content d-flex">
+                            <div class="content-left">
+                                <div class="Deal_Price">
+                                    <div class="product-price">
+                                        <div class="product___price d-flex">
+                                            <div class="product-price__current-price">4.290.000 ₫</div>
+                                            <div class="product-price__list-price">4.490.000 ₫</div>
+                                            <div class="product-price__discount-rate">-4%</div>
+                                        </div>
+                                    </div>
+                                    <div class="CashbackWidget">
+                                        <img style="height:16px;width:13px ;" src="../../assets/images-product-detaill/CashbackWidget.png" alt="">
+                                        <span class="text-cash">Tặng tới 1.342,97 Astra trị giá 683.570đ</span>
+                                    </div>
+                                </div>
+                                <div class="option-product">
+                                    <div class="main-selec">
+                                        <p class="option-name">Màu:
+                                            <span>Xanh</span>
+                                        </p>
+                                        <div class="option-list d-flex">
+                                            <div class="FigureOption d-flex">
+                                                <div class="option-figure"><img style="width:100%;" src="../../assets/images-product-detaill/option-pic1.webp" alt=""></div>
+                                                <span class="option-label">Xanh</span>
+                                                <img class="option-img" src="../../assets/images-product-detaill/tick.svg" alt="">
+                                            </div>
+                                            <div class="FigureOption d-flex">
+                                                <div class="option-figure"><img style="width:100%;" src="../../assets/images-product-detaill/option-pic2.webp" alt=""></div>
+                                                <span class="option-label">Đen</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Seller">
+                                    <div class="coupon__text">5 Mã Giảm Giá</div>
+                                    <div class="coupon__tags d-flex">
+                                        <div class="coupon__tag">Giảm 10k</div>
+                                        <div class="coupon__tag">Giảm 10k</div>
+                                        <div class="coupon__tag">Giảm 10k</div>
+                                        <img class="view-more" src="../../assets/images-product-detaill/next-icon.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="address-wrap">
+                                    <div class="address">
+                                        <div>
+                                            <span>Giao đến </span>
+                                            <span class="address___">H. Thuận Bắc, X. Công Hải, Ninh Thuận</span> - 
+                                            <span class="address-change">Đổi địa chỉ</span>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-zone__inner">
+                                        <div class="shipping-info">
+                                            <div class="shipping-info__item">
+                                                <div class="shipping-info__item__header d-flex">
+                                                    <div style="width: 49px;" class="shipping-info__item__header_logo"><img style="width: 49px; height: 14px;" src="../../assets/images-product-detaill/header-logo.png" alt=""></div>
+                                                    <div class="divider"></div>
+                                                    <div class="shipping-info__item__header__highlight">Thứ 6, ngày 26/08</div>
+                                                </div>
+                                                <div class="shipping-info__item__center">2.000đ (đã trừ 20K Freeship)</div>
+                                                <div class="shipping-info__item__footer">
+                                                    <img style="width: 13px;" src="../../assets/images-product-detaill/CashbackWidget.png" alt="">
+                                                    <span>Dùng 3,26 ASA để Freeship 100%</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <div class="title">Dịch Vụ Mua Kèm</div>
+                                    <div class="wrap">
+                                        <div class="wrap-item d-flex">
+                                            <img style="height:24px;" src="../../assets/images-product-detaill/pic1.svg" alt="">
+                                            <img style="width:48px; height: 48px;margin:0px 8px;" src="../../assets/images-product-detaill/pic2.jpg" alt="">
+                                            <div class="info d-flex">
+                                                <span class="name">Dịch vụ bảo vệ điện thoại, máy tính bảng - rơi, vỡ, vào nước - 12 tháng</span>
+                                                <span class="add-on-price">899.000 ₫</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add-to-card">
+                                    <div class="message d-flex">
+                                        <!-- <div class="wrap-input">
+                                           <p>Số Lượng</p>
+                                           <div class="btn">
+                                            <button><img src="../../assets/images-product-detaill/icons-remove1.svg" alt=""></button>
+                                            <input type="text" value="1">
+                                            <button><img src="../../assets/images-product-detaill/icons-remove2.svg" alt=""></button>
+                                           </div>
+                                        </div> -->
+                                        <div class="gr-btn d-flex">
+                                            <button class="btn btn-add-to-cart">Chọn mua</button>
+                                            <button class="btn btn-paymanet">Trả Góp
+                                                <span>1.139.750 ₫/Tháng</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-right">
+                                <div class="wrap-Seller">
+                                    <div class="Widget-seller">
+                                        <div class="sell-info d-flex">
+                                            <a href="">
+                                                <img style="width: 44px;border-radius: 50%;" src="../../assets/images-product-detaill/tiki.webp" alt="">
+                                                <div class="overview-right">
+                                                    <span style="display:grid;">
+                                                        <span class="name">Tiki Trading</span>
+                                                        <img style="width: 74px; height: 23px;" src="../../assets/images-product-detaill/official.webp" alt="">
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="sell-detail d-flex">
+                                            <div class="item review d-flex">
+                                                <div class="Title">
+                                                    <span>4.7 / 5</span>
+                                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="16" color="#fdd836" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                </div>
+                                                <div class="Sub_Title">4.9tr+</div>
+                                            </div>
+                                            <div class="boder"></div>
+                                            <div class="item normal d-flex">
+                                                <div class="Title">
+                                                    <span>429k+</span>
+                                                </div>
+                                                <div class="Sub_Title">Theo dõi</div>
+                                            </div>
+                                        </div>
+                                        <div class="seller-shop d-flex">
+                                            <a class="seen-shop d-flex" href="">
+                                                <img style="width:20px;height:20px;" src="../../assets/images-product-detaill/sell1.png" alt="">
+                                                <span>Xem Shop</span>
+                                            </a>
+                                            <a class="seen-shop d-flex" href="">
+                                                <img style="width:20px;height:20px;" src="../../assets/images-product-detaill/sell2.png" alt="">
+                                                <span>Xem Shop</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="insurance">
+                                        <div class="warranty-item">
+                                            <span class="itemLeft">Thời gian bảo hành</span>
+                                            <span class="itemRight">12 Tháng</span>
+                                        </div>
+                                        <div class="warranty-item">
+                                            <span class="itemLeft">Hình thức bảo hành</span>
+                                            <span class="itemRight">Điện tử</span>
+                                        </div>
+                                        <div class="warranty-item">
+                                            <span class="itemLeft">Nơi bảo hành</span>
+                                            <span class="itemRight">Bảo hành chính hãng</span>
+                                        </div>
+                                        <div class="warranty-item">
+                                            <span class="itemLeft">Hướng dẫn bảo hành</span>
+                                            <span class="itemRight TExt">Xem chi tiết</span>
+                                        </div>
+                                    </div>
+                                    <div class="CustomerBenefits d-flex">
+                                        <div class="benefits-item d-flex">
+                                            <img style="width:32px;height:32px;" src="../../assets/images-product-detaill/benefit-item1.png" alt="">
+                                            <span>Hoàn tiền<br>
+                                                111% <br>
+                                                nếu hàng giả
+                                            </span>
+                                        </div>
+                                        <div class="benefits-item d-flex">
+                                            <img style="width:32px;height:32px;" src="../../assets/images-product-detaill/benefit-item2.png" alt="">
+                                            <span>Mở hộp<br>
+                                                kiểm tra<br>
+                                                nhận hàng
+                                            </span>
+                                        </div>
+                                        <div class="benefits-item d-flex">
+                                            <img style="width:32px;height:32px;" src="../../assets/images-product-detaill/benefit-item3.png" alt="">
+                                            <span>Đổi trả trong<br>
+                                                <b>7 ngày</b><br>
+                                                Nếu sp lỗi
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-seller d-flex">
+                                    <div class="bottom-left">
+                                        <div class="left-item1">1 nhà bán khác</div>
+                                        <div class="left-item2">Giá từ 13.990.000 ₫</div>
+                                    </div>
+                                    <a class="bottom-right" href="">So Sánh</a>
+                                </div>
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="SILDER-PRODUCT container">
+                    <h2 class="TITle">Sản Phẩm Tương Tự</h2>
+                    <div class="silder-product">
+                        <div class="silder-wrap">
+                            <div class="product-flex d-flex">
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="wrap">
+                                    <a href="">
+                                        <div class="img-product">
+                                            <div class="item_1"><img style="width:183px;" src="../../assets/images-product-detaill/phone.webp" alt=""></div>
+                                            <img style="width: 136px;height: 24px;bottom: 0px;left: 0px;" class="item_2" src="../../assets/images-product-detaill/freeship.png" alt="">
+                                        </div>
+                                        <div class="Title-smart">
+                                            <h3>Máy Tính Bảng OPPO Pad Air (4GB/64GB) | Màn Hình 2K 1 tỷ Màu | Chip Snapdragon 680 | Hàng Chính Hãng</h3>
+                                        </div>
+                                        <div class="bottom-sell d-flex">
+                                            <div class="d-flex">
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="14" color="#fdd836" height="14" width="14" xmlns="http://www.w3.org/2000/svg" style="color: rgb(253, 216, 54);"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                                            </div>
+                                            <div class="d-flex Evaluate">
+                                                <div class="solid"></div>
+                                                <span>Đã bán 289</span>
+                                            </div>
+                                        </div>
+                                        <p class="prince discount">6.990.000 ₫
+                                         <span class="percent">-2%</span>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-infomation d-flex">
+                    <div class="left bg-white">
+                        <h2 class="TITle">Thông tin chi tiết</h2>
+                        <div class="table-info">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Dung lượng pin</td>
+                                        <td>10090mAh</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bluetooth</td>
+                                        <td>Bluetooth v5.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thương hiệu</td>
+                                        <td>Samsung</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Xuất xứ thương hiệu</td>
+                                        <td>Hàn Quốc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Camera sau</td>
+                                        <td>8.0 MP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Camera trước</td>
+                                        <td>5.0 MP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chip set</td>
+                                        <td>Snapdragon 750G</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPS</td>
+                                        <td>GPS, Glonass, Beidou, Galileo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phụ kiện đi kèm</td>
+                                        <td>Sách hướng dẫn, sạc, cáp</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Model</td>
+                                        <td>Galaxy Tab S7 FE LTE T735</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Xuất xứ</td>
+                                        <td>Việt Nam/Ấn Độ/Trung Quốc (Tùy từng đợt nhập hàng)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Trọng lượng</td>
+                                        <td>608g</td>
+                                    </tr>
+                                    <tr>
+                                        <td>RAM</td>
+                                        <td>4GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ROM</td>
+                                        <td>64GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kích thước màn hình</td>
+                                        <td>12.4 inch</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wifi</td>
+                                        <td>802.11 a/b/g/n/ac 2.4G+5GHz, VHT80 MU-MIMO</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="right"></div>
+                </div>
+                <div class="product-infomation d-flex">
+                    <div class="left bg-white">
+                        <h2 class="TITle">Mô Tả Sản Phẩm</h2>
+                        <div class="table-info">
+                            <div class="ToggleContent-wrap">
+                                <div class="ToggleContent">
+                                    <h3>S Pen cân tất, học chơi hết nấc</h3>
+                                    <p>Tận hưởng tính năng đột phá và thế hệ S Pen cải tiến thông minh viết vẽ như thật. Thiết bị hoàn hảo cho học tập, làm việc và giải trí với màn hình 12.4”, vi xử lý Snapdragon 750G, loa kép cùng Pin 10,090mAh cho trải nghiệm liền mạch suốt ngày dài.</p>
+                                    <p><img src="../../assets/images-product-detaill/phone-smart.webp" alt=""></p>
+                                    <div class="garadient"></div>
+                                </div>
+                                <a class="btn-more" href="">Xem Thêm Nội Dung</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right"></div>
+                </div>
+                <div class="review-wrap container bg-white">
+                    <div class="reviews__heading">Đánh Giá - Nhận Xét Từ Khách Hàng</div>
+                    <div class="reviews__inner">
+                        <div class="review-top d-flex">
+                            <div class="review-rating">
+                                <div class="review-rating__inner">
+                                    <div class="summary d-flex">
+                                        <div class="point">4.8</div>
+                                        <div class="rating">
+                                            <div class="star">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3L14.6198 8.81653L21 9.49342L16.239 13.7651L17.5623 20L12 16.8235L6.43769 20L7.761 13.7651L3 9.49342L9.38015 8.81653L12 3Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2L14.9109 8.50806L22 9.26543L16.71 14.045L18.1803 21.0211L12 17.467L5.81966 21.0211L7.29 14.045L2 9.26543L9.08906 8.50806L12 2ZM12 4.29426L9.72422 9.38228L4.18197 9.97439L8.31771 13.7111L7.16819 19.165L12 16.3864L16.8318 19.165L15.6823 13.7111L19.818 9.97439L14.2758 9.38228L12 4.29426Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3L14.6198 8.81653L21 9.49342L16.239 13.7651L17.5623 20L12 16.8235L6.43769 20L7.761 13.7651L3 9.49342L9.38015 8.81653L12 3Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2L14.9109 8.50806L22 9.26543L16.71 14.045L18.1803 21.0211L12 17.467L5.81966 21.0211L7.29 14.045L2 9.26543L9.08906 8.50806L12 2ZM12 4.29426L9.72422 9.38228L4.18197 9.97439L8.31771 13.7111L7.16819 19.165L12 16.3864L16.8318 19.165L15.6823 13.7111L19.818 9.97439L14.2758 9.38228L12 4.29426Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3L14.6198 8.81653L21 9.49342L16.239 13.7651L17.5623 20L12 16.8235L6.43769 20L7.761 13.7651L3 9.49342L9.38015 8.81653L12 3Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2L14.9109 8.50806L22 9.26543L16.71 14.045L18.1803 21.0211L12 17.467L5.81966 21.0211L7.29 14.045L2 9.26543L9.08906 8.50806L12 2ZM12 4.29426L9.72422 9.38228L4.18197 9.97439L8.31771 13.7111L7.16819 19.165L12 16.3864L16.8318 19.165L15.6823 13.7111L19.818 9.97439L14.2758 9.38228L12 4.29426Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3L14.6198 8.81653L21 9.49342L16.239 13.7651L17.5623 20L12 16.8235L6.43769 20L7.761 13.7651L3 9.49342L9.38015 8.81653L12 3Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2L14.9109 8.50806L22 9.26543L16.71 14.045L18.1803 21.0211L12 17.467L5.81966 21.0211L7.29 14.045L2 9.26543L9.08906 8.50806L12 2ZM12 4.29426L9.72422 9.38228L4.18197 9.97439L8.31771 13.7111L7.16819 19.165L12 16.3864L16.8318 19.165L15.6823 13.7111L19.818 9.97439L14.2758 9.38228L12 4.29426Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 3L14.6198 8.81653L21 9.49342L16.239 13.7651L17.5623 20L12 16.8235L6.43769 20L7.761 13.7651L3 9.49342L9.38015 8.81653L12 3Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2L14.9109 8.50806L22 9.26543L16.71 14.045L18.1803 21.0211L12 17.467L5.81966 21.0211L7.29 14.045L2 9.26543L9.08906 8.50806L12 2ZM12 4.29426L9.72422 9.38228L4.18197 9.97439L8.31771 13.7111L7.16819 19.165L12 16.3864L16.8318 19.165L15.6823 13.7111L19.818 9.97439L14.2758 9.38228L12 4.29426Z" fill="#FFA142"></path></svg>
+                                            </div>
+                                            <div class="total">100 nhận xét</div>
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="rating-level d-flex">
+                                            <div class="star-rating">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                            </div>
+                                            <div class="ProcessBar">
+                                                <div style="width:90% ;"></div>
+                                            </div>
+                                            <div class="number">110</div>
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="rating-level d-flex">
+                                            <div class="star-rating">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                            </div>
+                                            <div class="ProcessBar">
+                                                <div style="width:70%;"></div>
+                                            </div>
+                                            <div class="number">70</div>
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="rating-level d-flex">
+                                            <div class="star-rating">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                            </div>
+                                            <div class="ProcessBar">
+                                                <div style="width:45%;"></div>
+                                            </div>
+                                            <div class="number">45</div>
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="rating-level d-flex">
+                                            <div class="star-rating">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path d="M7 1.75L8.52824 5.14298L12.25 5.53783L9.47275 8.02966L10.2447 11.6667L7 9.81372L3.75532 11.6667L4.52725 8.02966L1.75 5.53783L5.47176 5.14298L7 1.75Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.99996 1.16675L8.69801 4.96312L12.8333 5.40491L9.74746 8.193L10.6052 12.2624L6.99996 10.1892L3.39476 12.2624L4.25246 8.193L1.16663 5.40491L5.30191 4.96312L6.99996 1.16675ZM6.99996 2.50507L5.67242 5.47308L2.43944 5.81848L4.85196 7.99821L4.18141 11.1797L6.99996 9.55882L9.81851 11.1797L9.14796 7.99821L11.5605 5.81848L8.3275 5.47308L6.99996 2.50507Z" fill="#FFA142"></path></svg>
+                                            </div>
+                                            <div class="ProcessBar">
+                                                <div style="width:20%;"></div>
+                                            </div>
+                                            <div class="number">20</div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="wrap__review">
+                                <div class="review-topp">
+                                    <div class="review-heading">Tất cả hình ảnh (55)</div>
+                                    <div class="review-img d-flex">
+                                        <div class="img-item"><img style="width:100%;" src="../../assets/images-product-detaill/list-img1.webp" alt=""></div>
+                                        <div class="img-item"><img style="width:100%;" src="../../assets/images-product-detaill/list-img1.webp" alt=""></div>
+                                        <div class="img-item"><img style="width:100%;" src="../../assets/images-product-detaill/list-img1.webp" alt=""></div>
+                                        <div class="img-item"><img style="width:100%;" src="../../assets/images-product-detaill/list-img1.webp" alt=""></div>
+                                        <div class="img-item"><img style="width:100%;" src="../../assets/images-product-detaill/list-img1.webp" alt=""></div>
+                                    </div>
+                                </div>
+                                <div class="review-bottom d-flex">
+                                    <div class="filter-review__label">Lọc xem theo :</div>
+                                        <div class="inner d-flex">
+                                            <div class="filter-item"><span class="filter-review__text">Mới nhất</span></div>
+                                            <div class="filter-item"><span class="filter-review__text">Mới nhất</span></div>
+                                            <div class="filter-item"><span class="filter-review__text">Mới nhất</span></div>
+                                            <div class="filter-item"><span class="filter-review__text">Mới nhất</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="review-comment d-flex">
+                            <div class="review-comment__user">
+                                <div class="review-comment__user-inner d-flex">
+                                    <div class="avatar">
+                                        <div class="avatar-user">
+                                            <span>TC</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="user-name">Nguyễn Tiến Chính</div>
+                                        <div class="user-date">Đã tham gia 1 năm</div> 
+                                    </div>
+                                </div>
+                                <div class="review-comment__user-info d-flex">
+                                    <img src="../../assets/images-product-detaill/comment.png" alt="">
+                                    <span>Đã viết: 32 đánh giá</span>
+                                </div>
+                                <div class="review-comment__user-info d-flex">
+                                    <img src="../../assets/images-product-detaill/like.png" alt="">
+                                    <span>Đã nhận: 15 lượt cảm ơn</span>
+                                </div>
+                            </div>
+                            <div style="flex:1;">
+                                <div class="rating-title d-flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <div class="title-review">Cực kì hài lòng</div>
+                                </div>
+                                <div class="seller-name d-flex">
+                                    <div class="seller-name-attributes d-flex">
+                                        <div class="icon-tick"></div>
+                                        <span>Đã mua hàng</span>
+                                    </div>
+                                </div>
+                                <div class="conmment-content">Sản phẩm thực tế đẹp lung linh, rộng mênh mông, và mỏng dờn. Hơn tưởng tượng nhiều.  Đắn đo mua định mua cái Apple iPad Air (5th Gen) Wi-Fi, 2022 nhưng cuối cùng chốt cái SS vì tính đa dạng hơn Apple. Máy cấu hình mạnh, màn hình rộng, 2 loa cho âm thanh lớn, nổi, rất hay. Có UD Penup tha hồ cho bé vẽ vời, sáng tạo. Đáng mua để học tập, vẽ vời, ghi chú, nghiên cứu...</div>
+                                <div class="comment-images">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                </div>
+                                <div class="comment__created-date">
+                                    <div class="color">
+                                        <div class="color-item">
+                                            <span>Màu: Xanh</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span>Đánh giá vào 2 tháng trước</span>
+                                        <div class="time-line">Đã dùng 11 ngày</div>
+                                    </div>
+                                </div>
+                                <span class="comment__thank">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask-thumb-up-0" maskUnits="userSpaceOnUse" x="2" y="2" width="16" height="16" style="mask-type: alpha;"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.125 2.5C7.84316 2.5 7.59618 2.68864 7.52202 2.96055L5.77263 9.375H3.125C2.77982 9.375 2.5 9.65482 2.5 10V16.875C2.5 17.2202 2.77982 17.5 3.125 17.5H14.0169C14.6136 17.4994 15.1905 17.2853 15.6432 16.8965C16.0958 16.5077 16.3945 15.9698 16.4852 15.38L17.1584 11.005C17.2131 10.6488 17.1903 10.2849 17.0913 9.93833C16.9923 9.59177 16.8195 9.27071 16.5848 8.99716C16.3501 8.72361 16.0591 8.50405 15.7316 8.35351C15.4041 8.20297 15.0479 8.12502 14.6875 8.125H10.625V5C10.625 4.33696 10.3616 3.70107 9.89277 3.23223C9.42393 2.76339 8.78804 2.5 8.125 2.5ZM5.625 16.25V10.625H3.75V16.25H5.625ZM6.875 10.0837L8.57908 3.83539C8.73871 3.89763 8.88539 3.99262 9.00888 4.11612C9.2433 4.35054 9.375 4.66848 9.375 5V8.75C9.375 9.09518 9.65482 9.375 10 9.375H14.6875C14.8677 9.37501 15.0458 9.41399 15.2095 9.48925C15.3732 9.56452 15.5188 9.67431 15.6361 9.81108C15.7535 9.94786 15.8398 10.1084 15.8893 10.2817C15.9388 10.4549 15.9503 10.6369 15.9229 10.815L15.2498 15.19C15.2044 15.4849 15.0551 15.7539 14.8287 15.9483C14.6024 16.1427 14.314 16.2497 14.0156 16.25H6.875V10.0837Z" fill="#38383D"></path></mask><g mask="url(#mask-thumb-up-0)"><rect x="2.5" y="2.5" width="15" height="15" fill="#0B74E5"></rect></g></svg>
+                                    <span>Hữu ích </span>
+                                </span>
+                                <span class="comment__reply">Bình luận</span>
+                                <span class="comment__reply">Chia sẻ</span>
+                                <div class="sub-comment">
+                                    <div class="review-sub-comment d-flex">
+                                        <div class="Avatar_user">
+                                            <div class="avatar__userr">
+                                                <span>TC</span>
+                                            </div>
+                                        </div>
+                                        <div class="sub-cmt-iner">
+                                            <div class="User d-flex">
+                                                <div class="__avatar-name">Nguyen Hoa</div>
+                                                <div class="time-line">Đã dùng 11 ngày</div>
+                                            </div>
+                                            <div class="content__user">Cho mình hỏi là máy bảo hành sao vậy ạ, máy kích hoạt bảo hành trước hay sao vậy ạ?</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-comment d-flex">
+                            <div class="review-comment__user">
+                                <div class="review-comment__user-inner d-flex">
+                                    <div class="avatar">
+                                        <div class="avatar-user">
+                                            <span>TC</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="user-name">Nguyễn Tiến Chính</div>
+                                        <div class="user-date">Đã tham gia 1 năm</div> 
+                                    </div>
+                                </div>
+                                <div class="review-comment__user-info d-flex">
+                                    <img src="../../assets/images-product-detaill/comment.png" alt="">
+                                    <span>Đã viết: 32 đánh giá</span>
+                                </div>
+                                <div class="review-comment__user-info d-flex">
+                                    <img src="../../assets/images-product-detaill/like.png" alt="">
+                                    <span>Đã nhận: 15 lượt cảm ơn</span>
+                                </div>
+                            </div>
+                            <div style="flex:1;">
+                                <div class="rating-title d-flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <div class="title-review">Cực kì hài lòng</div>
+                                </div>
+                                <div class="seller-name d-flex">
+                                    <div class="seller-name-attributes d-flex">
+                                        <div class="icon-tick"></div>
+                                        <span>Đã mua hàng</span>
+                                    </div>
+                                </div>
+                                <div class="conmment-content">Sản phẩm thực tế đẹp lung linh, rộng mênh mông, và mỏng dờn. Hơn tưởng tượng nhiều.  Đắn đo mua định mua cái Apple iPad Air (5th Gen) Wi-Fi, 2022 nhưng cuối cùng chốt cái SS vì tính đa dạng hơn Apple. Máy cấu hình mạnh, màn hình rộng, 2 loa cho âm thanh lớn, nổi, rất hay. Có UD Penup tha hồ cho bé vẽ vời, sáng tạo. Đáng mua để học tập, vẽ vời, ghi chú, nghiên cứu...</div>
+                                <div class="comment-images">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                </div>
+                                <div class="comment__created-date">
+                                    <div class="color">
+                                        <div class="color-item">
+                                            <span>Màu: Xanh</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span>Đánh giá vào 2 tháng trước</span>
+                                        <div class="time-line">Đã dùng 11 ngày</div>
+                                    </div>
+                                </div>
+                                <span class="comment__thank">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask-thumb-up-0" maskUnits="userSpaceOnUse" x="2" y="2" width="16" height="16" style="mask-type: alpha;"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.125 2.5C7.84316 2.5 7.59618 2.68864 7.52202 2.96055L5.77263 9.375H3.125C2.77982 9.375 2.5 9.65482 2.5 10V16.875C2.5 17.2202 2.77982 17.5 3.125 17.5H14.0169C14.6136 17.4994 15.1905 17.2853 15.6432 16.8965C16.0958 16.5077 16.3945 15.9698 16.4852 15.38L17.1584 11.005C17.2131 10.6488 17.1903 10.2849 17.0913 9.93833C16.9923 9.59177 16.8195 9.27071 16.5848 8.99716C16.3501 8.72361 16.0591 8.50405 15.7316 8.35351C15.4041 8.20297 15.0479 8.12502 14.6875 8.125H10.625V5C10.625 4.33696 10.3616 3.70107 9.89277 3.23223C9.42393 2.76339 8.78804 2.5 8.125 2.5ZM5.625 16.25V10.625H3.75V16.25H5.625ZM6.875 10.0837L8.57908 3.83539C8.73871 3.89763 8.88539 3.99262 9.00888 4.11612C9.2433 4.35054 9.375 4.66848 9.375 5V8.75C9.375 9.09518 9.65482 9.375 10 9.375H14.6875C14.8677 9.37501 15.0458 9.41399 15.2095 9.48925C15.3732 9.56452 15.5188 9.67431 15.6361 9.81108C15.7535 9.94786 15.8398 10.1084 15.8893 10.2817C15.9388 10.4549 15.9503 10.6369 15.9229 10.815L15.2498 15.19C15.2044 15.4849 15.0551 15.7539 14.8287 15.9483C14.6024 16.1427 14.314 16.2497 14.0156 16.25H6.875V10.0837Z" fill="#38383D"></path></mask><g mask="url(#mask-thumb-up-0)"><rect x="2.5" y="2.5" width="15" height="15" fill="#0B74E5"></rect></g></svg>
+                                    <span>Hữu ích </span>
+                                </span>
+                                <span class="comment__reply">Bình luận</span>
+                                <span class="comment__reply">Chia sẻ</span>
+                                <div class="sub-comment">
+                                    <div class="review-sub-comment d-flex">
+                                        <div class="Avatar_user">
+                                            <div class="avatar__userr">
+                                                <span>TC</span>
+                                            </div>
+                                        </div>
+                                        <div class="sub-cmt-iner">
+                                            <div class="User d-flex">
+                                                <div class="__avatar-name">Nguyen Hoa</div>
+                                                <div class="time-line">Đã dùng 11 ngày</div>
+                                            </div>
+                                            <div class="content__user">Cho mình hỏi là máy bảo hành sao vậy ạ, máy kích hoạt bảo hành trước hay sao vậy ạ?</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-comment d-flex">
+                            <div class="review-comment__user">
+                                <div class="review-comment__user-inner d-flex">
+                                    <div class="avatar">
+                                        <div class="avatar-user">
+                                            <span>TC</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="user-name">Nguyễn Tiến Chính</div>
+                                        <div class="user-date">Đã tham gia 1 năm</div> 
+                                    </div>
+                                </div>
+                                <div class="review-comment__user-info d-flex">
+                                    <img src="../../assets/images-product-detaill/comment.png" alt="">
+                                    <span>Đã viết: 32 đánh giá</span>
+                                </div>
+                                <div class="review-comment__user-info d-flex">
+                                    <img src="../../assets/images-product-detaill/like.png" alt="">
+                                    <span>Đã nhận: 15 lượt cảm ơn</span>
+                                </div>
+                            </div>
+                            <div style="flex:1;">
+                                <div class="rating-title d-flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10 2.5L12.1832 7.34711L17.5 7.91118L13.5325 11.4709L14.6353 16.6667L10 14.0196L5.36474 16.6667L6.4675 11.4709L2.5 7.91118L7.81679 7.34711L10 2.5Z" stroke="#FFA142" fill="#FFD52E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M9.99996 1.66675L12.4257 7.09013L18.3333 7.72127L13.925 11.7042L15.1502 17.5177L9.99996 14.5559L4.84968 17.5177L6.07496 11.7042L1.66663 7.72127L7.57418 7.09013L9.99996 1.66675ZM9.99996 3.57863L8.10348 7.81865L3.48494 8.31207L6.93138 11.426L5.97345 15.9709L9.99996 13.6554L14.0265 15.9709L13.0685 11.426L16.515 8.31207L11.8964 7.81865L9.99996 3.57863Z" fill="#FFA142"></path></svg>
+                                    <div class="title-review">Cực kì hài lòng</div>
+                                </div>
+                                <div class="seller-name d-flex">
+                                    <div class="seller-name-attributes d-flex">
+                                        <div class="icon-tick"></div>
+                                        <span>Đã mua hàng</span>
+                                    </div>
+                                </div>
+                                <div class="conmment-content">Sản phẩm thực tế đẹp lung linh, rộng mênh mông, và mỏng dờn. Hơn tưởng tượng nhiều.  Đắn đo mua định mua cái Apple iPad Air (5th Gen) Wi-Fi, 2022 nhưng cuối cùng chốt cái SS vì tính đa dạng hơn Apple. Máy cấu hình mạnh, màn hình rộng, 2 loa cho âm thanh lớn, nổi, rất hay. Có UD Penup tha hồ cho bé vẽ vời, sáng tạo. Đáng mua để học tập, vẽ vời, ghi chú, nghiên cứu...</div>
+                                <div class="comment-images">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                    <img src="../../assets/images-product-detaill/list-img1.webp" alt="">
+                                </div>
+                                <div class="comment__created-date">
+                                    <div class="color">
+                                        <div class="color-item">
+                                            <span>Màu: Xanh</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <span>Đánh giá vào 2 tháng trước</span>
+                                        <div class="time-line">Đã dùng 11 ngày</div>
+                                    </div>
+                                </div>
+                                <span class="comment__thank">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask-thumb-up-0" maskUnits="userSpaceOnUse" x="2" y="2" width="16" height="16" style="mask-type: alpha;"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.125 2.5C7.84316 2.5 7.59618 2.68864 7.52202 2.96055L5.77263 9.375H3.125C2.77982 9.375 2.5 9.65482 2.5 10V16.875C2.5 17.2202 2.77982 17.5 3.125 17.5H14.0169C14.6136 17.4994 15.1905 17.2853 15.6432 16.8965C16.0958 16.5077 16.3945 15.9698 16.4852 15.38L17.1584 11.005C17.2131 10.6488 17.1903 10.2849 17.0913 9.93833C16.9923 9.59177 16.8195 9.27071 16.5848 8.99716C16.3501 8.72361 16.0591 8.50405 15.7316 8.35351C15.4041 8.20297 15.0479 8.12502 14.6875 8.125H10.625V5C10.625 4.33696 10.3616 3.70107 9.89277 3.23223C9.42393 2.76339 8.78804 2.5 8.125 2.5ZM5.625 16.25V10.625H3.75V16.25H5.625ZM6.875 10.0837L8.57908 3.83539C8.73871 3.89763 8.88539 3.99262 9.00888 4.11612C9.2433 4.35054 9.375 4.66848 9.375 5V8.75C9.375 9.09518 9.65482 9.375 10 9.375H14.6875C14.8677 9.37501 15.0458 9.41399 15.2095 9.48925C15.3732 9.56452 15.5188 9.67431 15.6361 9.81108C15.7535 9.94786 15.8398 10.1084 15.8893 10.2817C15.9388 10.4549 15.9503 10.6369 15.9229 10.815L15.2498 15.19C15.2044 15.4849 15.0551 15.7539 14.8287 15.9483C14.6024 16.1427 14.314 16.2497 14.0156 16.25H6.875V10.0837Z" fill="#38383D"></path></mask><g mask="url(#mask-thumb-up-0)"><rect x="2.5" y="2.5" width="15" height="15" fill="#0B74E5"></rect></g></svg>
+                                    <span>Hữu ích </span>
+                                </span>
+                                <span class="comment__reply">Bình luận</span>
+                                <span class="comment__reply">Chia sẻ</span>
+                                <div class="sub-comment">
+                                    <div class="review-sub-comment d-flex">
+                                        <div class="Avatar_user">
+                                            <div class="avatar__userr">
+                                                <span>TC</span>
+                                            </div>
+                                        </div>
+                                        <div class="sub-cmt-iner">
+                                            <div class="User d-flex">
+                                                <div class="__avatar-name">Nguyen Hoa</div>
+                                                <div class="time-line">Đã dùng 11 ngày</div>
+                                            </div>
+                                            <div class="content__user">Cho mình hỏi là máy bảo hành sao vậy ạ, máy kích hoạt bảo hành trước hay sao vậy ạ?</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="navigation-wrap">
+                        <ul class="navigation d-flex">
+                            <li><a class="btn prev" href=""><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" color="#C4C4CF" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(196, 196, 207);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></a></li>
+                            <li><a class="btn active">1</a></li>
+                            <li><a class="btn btn1">2</a></li>
+                            <li><a class="btn btn1">3</a></li>
+                            <li><a class="btn btn1">5</a></li>
+                            <li><a class="btn btn1">6</a></li>
+                            <li><a class="btn next" href=""><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" color="#38383D" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(56, 56, 61);"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a></li>
+                        </ul>
+                       </div>
+                    </div>
+                </div>
+                <div class="product-wrap container">
+                    <div class="header-product">
+                        <h3 class="TITLE__">Khám Phá Thêm</h3>
+                        <div class="InfiniteScroll">
+                            <div class="tab-active d-flex active_item">
+                                <img style="width: 48px;" src="../../assets/images-product-detaill/tab1.webp" alt="">
+                                <div class="tab-text">Dành cho bạn</div>
+                            </div>
+                            <div class="tab-active d-flex">
+                                <img style="width: 48px;" src="../../assets/images-product-detaill/tab2.webp" alt="">
+                                <div class="tab-text">Ngày hội Astra</div>
+                            </div>
+                            <div class="tab-active d-flex">
+                                <img style="width: 48px;" src="../../assets/images-product-detaill/tab3.webp" alt="">
+                                <div class="tab-text">Điện thoại Smartphone</div>
+                            </div>
+                            <div class="tab-active d-flex">
+                                <img style="width: 48px;" src="../../assets/images-product-detaill/tab4.webp" alt="">
+                                <div class="tab-text">Trending</div>
+                            </div>
+                            <div class="tab-active d-flex">
+                                <img style="width: 48px;" src="../../assets/images-product-detaill/tab5.webp" alt="">
+                                <div class="tab-text">Macbook</div>
+                            </div>
+                            <div class="tab-active d-flex">
+                                <img style="width: 48px;" src="../../assets/images-product-detaill/tab6.webp" alt="">
+                                <div class="tab-text">Đi Chợ Siêu Sale</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="../../plugin/jquery/jquery.min.js"></script>
+    <script src="../../plugin/slick/slick.js"></script>
+    <script>
+        $('.product-flex').slick({
+            dots: false,
+            slidesToShow: 6,
+            slidesToScroll: 5,
+            touchMove: false
+        });
+    </script>
 </body>
+
 </html>
